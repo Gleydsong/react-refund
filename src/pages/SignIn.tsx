@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Input } from "../components/input";
+import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 
 export function SingIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(event: React.FormEvent) {
     event.preventDefault();
-    alert("Form submitted");
+    alert(`Form submitted\nEmail: ${email}\nPassword: ${password}`);
   }
   return (
     <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">
@@ -29,9 +29,7 @@ export function SingIn() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <Button type="submit" isLoading={isLoading}>
-        Entrar
-      </Button>
+      <Button type="submit">Entrar</Button>
 
       <a
         href="/signup"
