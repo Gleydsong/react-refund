@@ -1,4 +1,4 @@
-import { Routes } from "./routes";
+import { Routes } from "./routes/Index";
 
 export default function App() {
   return (
