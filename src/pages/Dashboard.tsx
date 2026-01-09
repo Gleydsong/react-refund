@@ -1,8 +1,18 @@
 import { Input } from "../components/Input";
 import React, { useState } from "react";
 import { Button } from "../components/Button";
+import { RefundItem } from "../components/RefundsItem";
+
+const REFUND_EXAMPLE = {
+  id: "123",
+  name: "Gleydson Silva",
+  category: "Transporte",
+  amount: "150.00",
+  categoryImg: CATEGORIES["transport"].icon,
+};
 
 import search from "../assets/search.svg";
+import { CATEGORIES } from "../utils/categories";
 
 export function Dashboard() {
   const [name, setName] = useState("");
@@ -23,11 +33,15 @@ export function Dashboard() {
           placeholder="Pesquisar solicitações"
           onChange={(e) => setName(e.target.value)}
         ></Input>
+
+        <Button type="submit" variant="iconSmall">
+          <img src={search} alt="Search Icon" className="w-5" />
+        </Button>
       </form>
 
-      <Button type="submit" variant="iconSmall">
-        <img src={search} alt="Search Icon" className="w-5" />
-      </Button>
+      <div>
+        <RefundItem data={REFUND_EXAMPLE} />
+      </div>
     </div>
   );
 }
