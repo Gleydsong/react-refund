@@ -1,5 +1,3 @@
-import type { ComponentProps } from "react";
-
 export type RefundItemProps = {
   id: string;
   name: string;
@@ -7,7 +5,8 @@ export type RefundItemProps = {
   amount: string;
   categoryImg: string;
 };
-type Props = ComponentProps<"a"> & {
+
+type Props = React.ComponentProps<"a"> & {
   data: RefundItemProps;
 };
 
@@ -18,17 +17,17 @@ export function RefundItem({ data, ...rest }: Props) {
       {...rest}
     >
       <img
-        className="w-8 h-8"
         src={data.categoryImg}
-        alt=" Icone da categoria"
+        alt="Ícone da categoria"
+        className="w-8 h-8"
       />
-      <div className="flex flex-col flex-1 ">
-        <strong className="flex-1 text-sm text-gray--100">{data.name}</strong>
-        <span className="text-xs text-gray-200">{data.category}</span>
+
+      <div className="flex flex-col flex-1">
+        <strong className="text-sm text-gray-100">{data.name}</strong>
+        <span className="text-xss">{data.category}</span>
       </div>
 
       <span className="text-sm text-gray-100 font-semibold">
-        {" "}
         <small className="font-normal text-gray-200">R$</small>
         {data.amount}
       </span>

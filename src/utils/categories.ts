@@ -1,29 +1,29 @@
-import food from "../assets/food.svg";
-import others from "../assets/others.svg";
-import service from "../assets/services.svg";
-import transport from "../assets/transport.svg";
-import accomodation from "../assets/accommodation.svg";
+import foodSvg from "../assets/food.svg";
+import othersSvg from "../assets/others.svg";
+import servicesSvg from "../assets/services.svg";
+import transportSvg from "../assets/transport.svg";
+import accommodationSvg from "../assets/accommodation.svg";
 
 export const CATEGORIES = {
   food: {
     name: "Alimentação",
-    icon: food,
+    icon: foodSvg,
   },
   others: {
     name: "Outros",
-    icon: others,
+    icon: othersSvg,
   },
-  service: {
-    name: "Servicos",
-    icon: service,
+  services: {
+    name: "Serviços",
+    icon: servicesSvg,
   },
   transport: {
     name: "Transporte",
-    icon: transport,
+    icon: transportSvg,
   },
   accomodation: {
     name: "Hospedagem",
-    icon: accomodation,
+    icon: accommodationSvg,
   },
 };
 

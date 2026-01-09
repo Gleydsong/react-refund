@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router";
-import { AuthLayout } from "../components/AuthLayout";
-import { SignUp } from "../pages/SignUp";
 
+import { AuthLayout } from "../components/AuthLayout";
 import { SignIn } from "../pages/SignIn";
+import { SignUp } from "../pages/SignUp";
 import { NotFound } from "../pages/NotFound";
 
 export function AuthRoutes() {

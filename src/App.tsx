@@ -1,9 +1,5 @@
-import { Routes } from "./routes/Index";
+import { Routes } from "./routes";
 
-export default function App() {
-  return (
-    <div>
-      <Routes />
-    </div>
-  );
+export function App() {
+  return <Routes />;
 }
